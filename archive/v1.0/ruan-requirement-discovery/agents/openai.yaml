@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ruan Requirement Discovery"
+  short_description: "Recoverable requirements from feedback and code"
+  default_prompt: "使用 $ruan-requirement-discovery 处理指定用户反馈目录，基于代码事实建立反馈索引、追问用户、细化需求并维护可恢复的需求分析文档。"

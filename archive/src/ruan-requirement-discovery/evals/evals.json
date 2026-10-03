@@ -1,0 +1,26 @@
+{
+  "skill_name": "ruan-requirement-discovery",
+  "evals": [
+    {
+      "id": 1,
+      "name": "initialize-scope-and-disposition",
+      "prompt": "我有一个 feedback/ 目录和一个项目代码库。请开始下一版本需求发现，先建立可恢复入口、分析范围和反馈索引；有些反馈可能只是重复、过期或不形成需求。不要修改业务代码。",
+      "expected_output": "创建或说明 ENTRY.md、FEEDBACK_INDEX.md 和 analysis_scope，并为进入范围的 FB 规划 disposition。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "question-to-decision-trace",
+      "prompt": "继续已有需求发现任务。REQ-001 的代码事实已经核实，但默认行为有两个合理选择，需要问我。请只提出当前能独立回答的问题，并在我回答后把 Decision 持久化，保留 source_q 和回答摘要。",
+      "expected_output": "维护 CURRENT_QUESTIONS.md，用户确认后写入 DECISIONS.md，并让 REQ 引用该 Decision。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "planning-ready-and-sanity-check",
+      "prompt": "请收束当前工作单元。判断相关 REQ 是否达到 planning-ready，补齐目标角色、范围、非目标和 success signal；然后做当前工作单元的轻量引用检查并最后更新 ENTRY。",
+      "expected_output": "只在条件满足时标记 planning-ready，保留依据引用，报告未决问题和 sanity check 结果。",
+      "files": []
+    }
+  ]
+}
